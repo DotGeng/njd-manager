@@ -6,7 +6,7 @@
 	<form id="itemeEditForm" class="itemForm" method="post">
 		<input type="hidden" name="id"/>
 	    <table cellpadding="5">
-	        <tr>
+	        <tr>       
 	            <td>商品类目:</td>
 	            <td>
 	            	<a href="javascript:void(0)" class="easyui-linkbutton selectItemCat">选择类目</a>

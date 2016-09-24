@@ -48,6 +48,7 @@ public class ContentCategoryController {
 		TaotaoResult result = contentCategoryService.deleteContentCategory(parentId, id);
 		return result;
 	}
+	
 	/**
 	 * 重命名节点
 	 */

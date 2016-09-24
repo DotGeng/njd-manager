@@ -1,7 +1,5 @@
 package com.taotao.service.impl;
 
-import java.sql.Time;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -45,5 +43,10 @@ public class ContentServiceImpl implements ContentService {
 		dataGridResult.setTotal(pageInfo.getTotal());
 		dataGridResult.setRows(list);
 		return dataGridResult;
+	}
+	@Override
+	public TaotaoResult modifyContent(TbContent content) throws Exception {
+		contentMapper.updateByPrimaryKeySelective(content);
+		return TaotaoResult.ok();
 	}
 }

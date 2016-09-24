@@ -29,5 +29,7 @@ public class ContentController {
 		EUDataGridResult dataGridResult =  contentService.getContentList(categoryId, page, rows);
 		return dataGridResult;
 	}
+	//内容的编辑功能
 	
+	//内容的删除功能
 }
