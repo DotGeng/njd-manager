@@ -46,7 +46,15 @@ public class ContentServiceImpl implements ContentService {
 	}
 	@Override
 	public TaotaoResult modifyContent(TbContent content) throws Exception {
+		content.setUpdated(new Date());
 		contentMapper.updateByPrimaryKeySelective(content);
+		return TaotaoResult.ok();
+	}
+	@Override
+	public TaotaoResult deleteContent(List<Long> ids) throws Exception {
+		for(int i = 0 ; i < ids.size() ; i ++) {
+			contentMapper.deleteByPrimaryKey(ids.get(i));
+		}
 		return TaotaoResult.ok();
 	}
 }
